@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QMLAppTemplates</string>
+    <string name="desc">Simple qml app</string>
+</resources>
