@@ -1,7 +1,7 @@
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtQuick.Layouts 1.11
-import QtMultimedia 5.11
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
+import QtMultimedia 5.15
 
 Item
 {
@@ -84,7 +84,7 @@ Item
     Audio
     {
         id: music
-        source: "../assets/music.mp3"
+        source: "qrc:/res/sounds/music.mp3"
         loops: Audio.Infinite
         autoPlay: true
     }
@@ -133,7 +133,7 @@ Item
             id: head
             height: main.height * 0.1
             width: height
-            source: "../assets/bot_%1_right.png".arg(dropping ? "blink" : "eyes")
+            source: "qrc:/res/images/bot_%1_right.png".arg(dropping ? "blink" : "eyes")
             z: 1
         }
 
@@ -142,7 +142,7 @@ Item
             height: main.height * 0.1
             width: height
             y: height / 3
-            source: "../assets/bot_ball.png"
+            source: "qrc:/res/images/bot_ball.png"
 
             RotationAnimator on rotation
             {
@@ -222,7 +222,7 @@ Item
         id: topTileComponent
         Image
         {
-            source: "../assets/top_tile.png"
+            source: "qrc:/res/images/top_tile.png"
             NumberAnimation on x { duration : 1800; to: -tile_width }
         }
     }
@@ -233,7 +233,7 @@ Item
         id: bottomTileComponent
         Image
         {
-            source: "../assets/bottom_tile.png"
+            source: "qrc:/res/images/bottom_tile.png"
             NumberAnimation on x { duration : 1800; to: -tile_width }
         }
     }
@@ -244,7 +244,7 @@ Item
         id: wallComponent
         Image
         {
-            source: "../assets/wall_tile.png"
+            source: "qrc:/res/images/wall_tile.png"
             NumberAnimation on x { duration : 1800; to: -tile_width }
         }
     }

@@ -1,12 +1,12 @@
 <RCC>
-    <qresource prefix="/assets">
-        <file>bot_blink_right.png</file>
-        <file>bot_eyes_right.png</file>
-        <file>bot_ball.png</file>
-        <file>background.png</file>
-        <file>top_tile.png</file>
-        <file>bottom_tile.png</file>
-        <file>wall_tile.png</file>
-        <file>music.mp3</file>
+    <qresource >
+        <file>res/images/bot_blink_right.png</file>
+        <file>res/images/bot_eyes_right.png</file>
+        <file>res/images/bot_ball.png</file>
+        <file>res/images/background.png</file>
+        <file>res/images/top_tile.png</file>
+        <file>res/images/bottom_tile.png</file>
+        <file>res/images/wall_tile.png</file>
+        <file>res/sounds/music.mp3</file>
     </qresource>
 </RCC>

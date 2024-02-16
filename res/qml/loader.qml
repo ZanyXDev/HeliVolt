@@ -4,7 +4,6 @@ import QtQuick.Layouts 1.11
 import QtQuick.Window 2.11
 import Qt.labs.settings 1.0
 
-import "../config.js" as Config
 
 ApplicationWindow
 {
@@ -18,17 +17,15 @@ ApplicationWindow
 
     color: "#000000"
 
-    visibility: Window.FullScreen
+
+   // visibility: Window.FullScreen
 
     // this is set from main.cpp
     property bool _DEBUG_MODE
 
     Component.onCompleted:
     {
-        if (_DEBUG_MODE)
-            console.log("DEBUG MODE")
 
-        console.log("config:", JSON.stringify(Config, null, 4))
     }
 
     // persistent settings
@@ -40,13 +37,13 @@ ApplicationWindow
     }
 
     // digital font
-    FontLoader { source: "/fonts/digital-7.ttf"  }
+    FontLoader { source: "qrc:/fonts/res/fonts/digital-7.ttf"  }
 
     // background image, always the same
     Image
     {
         anchors.fill: parent
-        source: "../assets/background.png"
+        source: "qrc:/res/images/background.png"
     }
 
     // main application content
@@ -54,7 +51,7 @@ ApplicationWindow
     Loader
     {
         id: loader
-        source: _DEBUG_MODE ? "%1/qml/main.qml".arg(Config.api.url) : "qrc:/qml/main.qml"
+        source: "qrc:/res/qml/main.qml"
         anchors.fill: parent
         asynchronous: true
         focus: true
